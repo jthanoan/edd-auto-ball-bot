@@ -1,6 +1,6 @@
 # Python program to implement
 # Webcam Motion Detector
-
+#FUMBO
 # importing OpenCV, time and Pandas library
 import argparse, cv2, time as t, pandas, imutils
 # importing datetime class from datetime library
@@ -22,8 +22,8 @@ time = []
 df = pandas.DataFrame(columns=["Start", "End"])
 
 # Capturing video
-"""video = cv2.VideoCapture(0)"""
-video = cv2.VideoCapture("C:\\Users\\jonat\\Downloads\\IMG_7928__1__MOV_AdobeExpress.mp4")
+video = cv2.VideoCapture(0)
+#video = cv2.VideoCapture("C:\\Users\\jonat\\Downloads\\WIN_20230108_14_19_56_Pro_AdobeExpress_AdobeExpress.mp4")
 
 # Infinite while loop to treat stack of image as video
 prev_time = t.time()
@@ -65,7 +65,7 @@ while True:
                                cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     for contour in cnts:
-        if cv2.contourArea(contour) < 10:
+        if cv2.contourArea(contour) < 10 or cv2.contourArea(contour) > 5000:
             continue
         motion = 1
 
