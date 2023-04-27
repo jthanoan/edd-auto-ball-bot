@@ -6,7 +6,7 @@ import argparse
 import cv2
 import imutils
 import time
-
+#
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-v", "--video",
